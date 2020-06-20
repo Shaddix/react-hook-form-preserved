@@ -1,0 +1,28 @@
+{
+  "name": "use-preserved-form",
+  "version": "0.1.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "typescript": "3.8.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-hook-form": "^6.0.0-rc.5"
+  },
+  "scripts": {
+    "prepublish": "yarn build",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "Shaddix",
+  "license": "MIT",
+  "homepage": "https://github.com/shaddix/use-preserved-form#readme",
+  "files": [
+    "dist/**/*"
+  ]
+}

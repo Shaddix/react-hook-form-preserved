@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "workspaces": [
+    "use-preserved-form",
+    "example"
+  ],
+  "nohoist": [
+    "**/node-sass",
+    "**/node-sass/**",
+    "**/jest",
+    "**/jest/**"
+  ],
+  "scripts": {
+    "lib": "yarn workspace use-preserved-form",
+    "example": "yarn workspace example",
+    "start": "yarn example start",
+    "publish": "yarn lib publish",
+    "lint": "eslint \"*/**/*.{js,ts,tsx}\" --quiet --fix"
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
