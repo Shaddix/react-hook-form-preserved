@@ -6,7 +6,7 @@ You can play with it [live](https://shaddix.github.io/use-preserved-form/).
 
 ## Install
 
-    npm install react-hook-form
+    npm install react-hook-form-preserved
 
 
 ## How-to use
@@ -22,7 +22,7 @@ There's also a small [example](https://github.com/Shaddix/use-preserved-form/blo
 
 ```jsx
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { usePreservedForm } from 'react-hook-form-preserved';
 
 function App() {
   const { register, handleSubmit, errors, reset } = usePreservedForm('myForm'); // initialise the hook

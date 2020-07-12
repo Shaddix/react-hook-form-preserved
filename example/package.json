@@ -21,7 +21,7 @@
     "react-hook-form": "^6.0.0-rc.5",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2",
-    "use-preserved-form": "*"
+    "react-hook-form-preserved": "*"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePreservedForm } from 'use-preserved-form';
+import { usePreservedForm } from 'react-hook-form-preserved';
 
 type FormData = {
   name: string;
