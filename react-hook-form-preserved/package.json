@@ -7,6 +7,7 @@
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "copyfiles": "^2.3.0",
     "typescript": "3.8.3"
   },
   "peerDependencies": {
@@ -15,7 +16,7 @@
     "react-hook-form": "^6.0.4"
   },
   "scripts": {
-    "prepublish": "yarn build",
+    "prepublish": "yarn build && copyfiles -u 1 ../README.md dist/",
     "build": "tsc",
     "watch": "tsc -w"
   },
