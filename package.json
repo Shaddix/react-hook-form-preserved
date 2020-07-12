@@ -14,7 +14,7 @@
     "lib": "yarn workspace react-hook-form-preserved",
     "example": "yarn workspace example",
     "start": "yarn example start",
-    "publish": "yarn lib publish",
+    "lib-publish": "yarn lib publish",
     "lint": "eslint \"*/**/*.{js,ts,tsx}\" --quiet --fix"
   },
   "dependencies": {
