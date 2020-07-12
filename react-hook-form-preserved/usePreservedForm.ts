@@ -69,7 +69,6 @@ export function usePreservedForm<
   form.reset = useCallback(
     (props) => {
       reset(props);
-      console.log('reset');
       const saveValuesFunction = saveValuesFactory();
       saveValuesFunction();
     },
