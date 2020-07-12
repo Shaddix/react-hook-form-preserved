@@ -1,7 +1,8 @@
-# use-preserved-form
+# react-hook-form-preserved
 
 This is an extension to [react-hook-form](https://github.com/react-hook-form/react-hook-form) that preserves user input in case page was refreshed or form was closed.
-You can play with it [live](https://shaddix.github.io/use-preserved-form/).
+
+Here's the [demo](https://shaddix.github.io/use-preserved-form/).
 
 
 ## Install
