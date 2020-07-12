@@ -4,6 +4,7 @@ This is an extension to [react-hook-form](https://github.com/react-hook-form/rea
 
 Here's the [demo](https://shaddix.github.io/use-preserved-form/).
 
+![Demo](react-hook-form-preserved.gif)
 
 ## Install
 
