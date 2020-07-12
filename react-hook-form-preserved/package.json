@@ -1,6 +1,6 @@
 {
   "name": "react-hook-form-preserved",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {},
@@ -16,7 +16,7 @@
     "react-hook-form": "^6.0.4"
   },
   "scripts": {
-    "prepublish": "yarn build && copyfiles -u 1 ../README.md dist/",
+    "prepublish": "yarn build && copyfiles -u 1 ../README.md ../react-hook-form-preserved.gif dist/",
     "build": "tsc",
     "watch": "tsc -w"
   },
