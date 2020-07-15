@@ -72,7 +72,6 @@ function usePreservedForm(formName, optionsParam) {
   form.reset = react_1.useCallback(
     function (props) {
       reset(props);
-      console.log('reset');
       var saveValuesFunction = saveValuesFactory();
       saveValuesFunction();
     },
