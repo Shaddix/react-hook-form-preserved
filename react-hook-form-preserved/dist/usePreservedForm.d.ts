@@ -1,12 +1,8 @@
-import {
-  FieldValues,
-  UseFormMethods,
-  UseFormOptions,
-} from 'react-hook-form/dist/types/form';
+import { FieldValues, UseFormReturn, UseFormProps } from 'react-hook-form';
 export declare function usePreservedForm<
   FormValues extends FieldValues = FieldValues,
   ValidationContext extends object = object
 >(
   formName: string,
-  optionsParam?: UseFormOptions<FormValues, ValidationContext>,
-): UseFormMethods<FormValues>;
+  optionsParam?: UseFormProps<FormValues, ValidationContext>,
+): UseFormReturn<FormValues>;

@@ -1,10 +1,6 @@
 import React, { useCallback, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import {
-  FieldValues,
-  UseFormMethods,
-  UseFormOptions,
-} from 'react-hook-form/dist/types/form';
+import { FieldValues, UseFormReturn, UseFormProps } from 'react-hook-form';
 
 /*
   Preserves react-hook-form between unmount/mount cycles.
@@ -14,8 +10,8 @@ export function usePreservedForm<
   ValidationContext extends object = object
 >(
   formName: string,
-  optionsParam?: UseFormOptions<FormValues, ValidationContext>,
-): UseFormMethods<FormValues> {
+  optionsParam?: UseFormProps<FormValues, ValidationContext>,
+): UseFormReturn<FormValues> {
   const options = optionsParam ?? {};
   const getValuesRef = React.useRef<(() => FieldValues) | null>(null);
 
@@ -43,16 +39,18 @@ export function usePreservedForm<
   const fields = form.control.fieldsRef.current;
   useEffect(() => {
     for (const key in fields) {
-      const fieldRef = fields[key]!.ref as any;
+      const fieldRef = fields[key]!._f.ref as any;
       fieldRef.addEventListener('blur', handleChange);
       fieldRef.addEventListener('input', handleChange);
+      fieldRef.addEventListener('reset', handleChange);
     }
 
     return () => {
       for (const key in fields) {
-        const fieldRef = fields[key]!.ref as any;
+        const fieldRef = fields[key]!._f.ref as any;
         fieldRef.removeEventListener('input', handleChange);
         fieldRef.removeEventListener('blur', handleChange);
+        fieldRef.removeEventListener('reset', handleChange);
       }
     };
   }, [fields]);
